@@ -1,0 +1,19 @@
+{% extends "main.html" %}
+
+{% block content %}
+
+<div>
+    <form method='POST' action= "">
+        {% csrf_token %}
+
+        <lable>Tên người dùng:</lable>
+        <input type="text" name= "username" placeholder="Nhập tên người dùng" />
+
+        <lable>Mật khẩu: </lable>
+        <input type="password" name= "password" placeholder="Nhập mật khẩu" />
+
+        <input type="submit" value="Login" />
+    </form>
+</div>
+
+{% endblock content  %}

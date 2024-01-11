@@ -2,8 +2,15 @@
     <h1>LOGO</h1>
 </a>
 
+
+
 <form method="GET" actions="{% url "home" %}">
     <input type="text" name="q" placeholder="Tìm kiếm phòng"/>
 </form>
 
-<hr></hr>
+{% if request.user.is_authenticated %}
+<a href="{% url "logout" %}">Đăng xuất</a>
+{% else %}
+<a href="{% url 'login' %}">Đăng nhập</a>
+{% endif %}
+<hr>
